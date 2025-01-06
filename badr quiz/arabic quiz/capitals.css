@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/capitals.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    flex-direction: column;
+    
+}
+
+.container {
+    border-radius: 30px;
+    padding: 20px;
+    width: 360px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: none;
+    font-family: "Exo 2", sans-serif;
+    background: rgb(63, 161, 251);
+    background: linear-gradient(
+    142deg,
+    rgba(63, 161, 251, 1) 0%,
+    rgba(252, 70, 168, 1) 100%
+  );
+
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#quizContainer {
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: #a32ab3;
+    color: rgb(11, 232, 240);
+    font-size:  x-large;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option-btn:hover {
+    background-color: #793d81;
+}
+
+#resultContainer {
+    display: none;
+}
+
+#nextBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#nextBtn:hover {
+    background-color: #45a049;
+}
+p{
+    font-style: italic;
+    font-size: large;
+    color: #0f0c0c;
+}
+#home{
+    
+        padding: 10px 20px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        font-size: 17px;
+        font-weight: 500;
+        color: #ffffff80;
+        text-shadow: none;
+        background: transparent;
+        cursor: pointer;
+        box-shadow: transparent;
+        border: 1px solid #ffffff80;
+        transition: 0.5s ease;
+        user-select: none;
+        margin: 2em;
+
+        
+      }
+      
+      #home:hover,
+      :focus {
+        color: #ffffff;
+        background: #008cff;
+        border: 1px solid #008cff;
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+        box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+          0 0 100px #008cff;
+      }
