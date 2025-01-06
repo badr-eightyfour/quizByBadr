@@ -105,7 +105,7 @@ img{
       .text-effect{ font-size: 45px; }
   }
   .share {
-    margin-top: 5em;
+    margin: 49px;
     display: flex;
     flex-direction: row;
     gap: 1em;
