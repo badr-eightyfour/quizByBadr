@@ -1,0 +1,341 @@
+/* From Uiverse.io by Smit-Prajapati */ 
+img{
+    height: 250px;
+    display: flex;
+}
+
+.button {
+    /* in scss with just one variable i can change opacity with rgba(variable, opacity) but in css it's not possible so i have used three seperate variables */
+  
+    --main-color: rgb(46, 213, 115);
+    --main-bg-color: rgba(46, 213, 116, 0.36);
+    --pattern-color: rgba(46, 213, 116, 0.073);
+  
+    /* change this rotation value */
+    filter: hue-rotate(0deg);
+  
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    background: radial-gradient(
+        circle,
+        var(--main-bg-color) 0%,
+        rgba(0, 0, 0, 0) 95%
+      ),
+      linear-gradient(var(--pattern-color) 1px, transparent 1px),
+      linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+    background-size:
+      cover,
+      15px 15px,
+      15px 15px;
+    background-position:
+      center center,
+      center center,
+      center center;
+    border-image: radial-gradient(
+        circle,
+        var(--main-color) 0%,
+        rgba(0, 0, 0, 0) 100%
+      )
+      1;
+    border-width: 1px 0 1px 0;
+    color: var(--main-color);
+    padding: 1rem 3rem;
+    font-weight: 700;
+    margin-top: 2em;
+    font-size: 1.5rem;
+    transition: background-size 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    background-size:
+      cover,
+      10px 10px,
+      10px 10px;
+  }
+  .button:active {
+    filter: hue-rotate(250deg);
+  }
+  body{
+    background-color: black;
+   
+    place-items: center;
+    padding: 5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    
+  }
+  @import url('https://fonts.googleapis.com/css?family=Raleway|Sacramento');
+ 
+  .text-effect{
+      color: #fff6a9;
+      font-family: 'Sacramento', cursive;
+      font-size: 120px;
+      font-weight: 600;
+      text-align: center;
+      text-transform: capitalize;
+      margin: 20px auto 0;
+      text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      position: relative;
+      animation: animate 2s ease-in-out infinite;
+  }
+  @keyframes animate{
+      20%, 24%, 55%{
+          color: #111;
+          text-shadow: none;
+      }
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100%{
+          color: #fff6a9;
+          text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      }
+  }
+  @media only screen and (max-width: 990px){
+      .text-effect{ font-size: 100px; }
+  }
+  @media only screen and (max-width: 767px){
+      .text-effect{ font-size: 80px; }
+  }
+  @media only screen and (max-width: 479px){
+      .text-effect{ font-size: 60px; }
+  }
+  @media only screen and (max-width: 359px){
+      .text-effect{ font-size: 45px; }
+  }
+  .share {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    transition: .4s ease-in-out;
+    margin-top: 60px;
+  }
+  
+  .btn1 {
+    position: relative;
+    width: 3em;
+    height: 3em;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    transition: .4s all;
+  }
+  
+  .btn1 .instagram {
+    margin-top: 0.1em;
+    fill: #cc39a4;
+  }
+  
+  .btn1 .tooltiptext1 {
+    visibility: hidden;
+    width: 6em;
+    height: 8em;
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1em;
+    position: absolute;
+    left: -1.5em;
+    top: -8em;
+    z-index: 1;
+    transition: .1s ease-in-out;
+  }
+  
+  .btn1 .tooltiptext1 .card {
+    width: 4em;
+    height: 4em;
+    background-color: white;
+  }
+  
+  .btn1 .tooltiptext1 .account {
+    margin-top: 1em;
+  }
+  
+  .btn1 .tooltiptext1 .username {
+    font-size: 0.7em;
+    margin-top: 1.6em;
+    font-weight: bold;
+  }
+  
+  .btn1:hover .tooltiptext1 {
+    transform: translateY(-1em);
+    visibility: visible;
+  }
+  
+  .btn1:hover {
+    background-color: #cc39a4;
+  }
+  
+  .btn1:hover .instagram {
+    fill: white;
+  }
+  
+  .btn2 {
+    position: relative;
+    width: 3em;
+    height: 3em;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    transition: .4s all;
+  }
+  
+  .btn2 .twitter {
+    margin-top: .25em;
+    margin-left: .1em;
+    fill: #03A9F4;
+  }
+  
+  .btn2 .tooltiptext2 {
+    visibility: hidden;
+    width: 6em;
+    height: 8em;
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1em;
+    position: absolute;
+    left: -1.5em;
+    top: -8em;
+    z-index: 1;
+    transition: .1s ease-in-out;
+  }
+  
+  .btn2 .tooltiptext2 .card {
+    width: 4em;
+    height: 4em;
+    background-color: white;
+  }
+  
+  .btn2 .tooltiptext2 .account {
+    margin-top: 1em;
+  }
+  
+  .btn2 .tooltiptext2 .username {
+    font-size: 0.6em;
+    margin-top: 1.6em;
+    font-weight: bold;
+  }
+  
+  .btn2:hover .tooltiptext2 {
+    transform: translateY(-1em);
+    visibility: visible;
+  }
+  
+  .btn2:hover {
+    background-color: #03A9F4;
+  }
+  
+  .btn2:hover .twitter {
+    fill: white;
+  }
+  
+  .btn3 {
+    position: relative;
+    width: 3em;
+    height: 3em;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    transition: .4s all;
+  }
+  
+  .btn3 .tooltiptext3 {
+    visibility: hidden;
+    width: 6em;
+    height: 8em;
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1em;
+    position: absolute;
+    left: -1.5em;
+    top: -8em;
+    z-index: 1;
+    transition: .1s ease-in-out;
+  }
+  
+  .btn3 .tooltiptext3 .card {
+    width: 4em;
+    height: 4em;
+    background-color: white;
+  }
+  
+  .btn3 .tooltiptext3 .account {
+    margin-top: 1em;
+  }
+  
+  .btn3 .tooltiptext3 .username {
+    font-size: 0.7em;
+    margin-top: 1.6em;
+    font-weight: bold;
+  }
+  
+  .btn3:hover .tooltiptext3 {
+    transform: translateY(-1em);
+    visibility: visible;
+  }
+  
+  .btn3:hover {
+    background-color: black;
+  }
+  
+  .btn3:hover .git {
+    fill: white;
+  }
+/* From Uiverse.io by nima-mollazadeh */ 
+.arabic {
+  margin-top: 20px;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+.arabic span {
+  position: relative;
+  z-index: 1;
+}
+
+.arabic::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #272727;
+  border-radius: 9px;
+  transition: 0.5s;
+}
+
+.arabic:hover::before {
+  opacity: 0.7;
+}
+
+.arabic::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  border-radius: 9px;
+  transition: 0.5s;
+  opacity: 0;
+  filter: blur(20px);
+}
+
+.arabic:hover:after {
+  opacity: 1;
+}
+
+
+  
